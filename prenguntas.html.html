@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preguntas</title>
+  <style>
+    /* Add CSS styles here */
+    h1, h3 {
+  color: white;
+    }
+    .color1 {
+      color: rgb(176, 230, 255);
+    }
+
+    .color2 {
+      color: rgb(185, 185, 255);
+    }
+
+    .color3 {
+      color: rgb(203, 252, 203);
+    }
+
+    .color4 {
+      color: rgba(253, 198, 95, 0.808);
+    }
+
+    .color5 {
+      color: rgb(255, 0, 255);
+    }
+
+    .color6 {
+      color: rgb(152, 253, 253);
+    }
+
+    .color7 {
+      color: rgb(255, 222, 227);
+      border-color: aliceblue;
+    }
+
+    .color8 {
+      color: rgba(255, 121, 121, 0.664);
+    }
+
+    .color9 {
+      color: magenta;
+    }
+
+    .color10 {
+      color: rgb(211, 234, 241);
+    }
+
+    html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+body {
+  background-image: url("https://www.gifmaniacos.es/wp-content/uploads/2016/04/giphy-26.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#response {
+      color: white;
+    }
+
+</style>
+
+  
+
+</head>
+<body>
+  <div class="overlay"></div>
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Preguntas</title>
+</head>
+<body>
+  <h1>Hola Amigue</h1>
+
+  <form id="myForm">
+    <h3>1:</h3>
+    <p class="color1">¿Cuál es tu recuerdo más divertido de nuestra infancia juntos?</p>
+    <textarea name="answer1"></textarea>
+
+    <h3>2:</h3>
+    <p class="color2">Si pudieras viajar a cualquier lugar del mundo, ¿dónde irías y por qué?</p>
+    <textarea name="answer2"></textarea>
+
+    <h3>3:</h3>
+    <p class="color3">¿Cuál ha sido la experiencia más desafiante que has tenido y cómo la superaste?</p>
+    <textarea name="answer3"></textarea>
+
+    <h3>4:</h3>
+    <p class="color4">Si tuvieras que elegir un superpoder, ¿cuál sería y cómo lo usarías?</p>
+    <textarea name="answer4"></textarea>
+
+    <h3>5:</h3>
+    <p class="color5">¿Cuál es tu película o serie favorita, y qué es lo que más te gusta de ella?</p>
+    <textarea name="answer5"></textarea>
+
+    <h3>6:</h3 >
+    <p class="color6">Si pudieras cenar con cualquier persona, viva o fallecida, ¿quién sería y qué le preguntarías?</p>
+    <textarea name="answer6"></textarea>
+
+    <h3>7:</h3>
+    <p class="color7">¿Qué actividad te relaja más después de un día agotador?</p>
+    <textarea name="answer7"></textarea>
+
+    <h3>8:</h3>
+    <p class="color8">Si ganaras la lotería, ¿cómo cambiarían tus planes y metas en la vida?</p>
+    <textarea name="answer8"></textarea>
+
+    <h3>9:</h3>
+    <p class="color9">¿Cuál es tu mayor sueño o meta a largo plazo?</p>
+    <textarea name="answer9"></textarea>
+
+    <h3>10:</h3>
+    <p class="color10">Si tuvieras que describirte en tres palabras, ¿cuáles usarías?</p>
+    <textarea name="answer10"></textarea>
+
+    <br>
+    <input type="submit" value="Enviar">
+  </form>
+
+  
+
+  <div id="response"></div>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // Obtain all text areas with responses
+      var responses = document.querySelectorAll("textarea");
+
+      // Construct the message with all the answers
+      var responseMessage = "Respuestas:<br>";
+      for (var i = 0; i < responses.length; i++) {
+        responseMessage += "<strong>Respuesta" + (i + 1) + ":</strong><br>";
+        responseMessage += responses[i].value + "<br><br>";
+      }
+
+      // Display the response message
+      document.getElementById("response").innerHTML = responseMessage;
+
+      // Clear the text areas after displaying the message
+      for (var i = 0; i < responses.length; i++) {
+        responses[i].value = "";
+      }
+    });
+  </script>
+
+  
+</body>
+</html>
